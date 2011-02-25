@@ -1,0 +1,3 @@
+ChunkMailer#notify_client
+
+Find me in app/views/chunk_mailer/notify_client.erb

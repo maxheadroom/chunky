@@ -1,0 +1,9 @@
+Hello <%= @chunk.client_contact_name %>
+
+you got a new download from I-D Media AG (<%= @chunk.author %>) <% if @chunk.description %>regarding <%= @chunk.description %><% end %>
+
+Please download the file <%= @chunk.filename %> from this link:
+
+ http://<%= BASE_URL %>/download/download/<%= @chunk.link %> 
+
+This link will expire on: <%= @chunk.expire_date %> <% if @chunk.download_count_max  %>or after <%= @chunk.download_count_max %> downloads.<% end %>

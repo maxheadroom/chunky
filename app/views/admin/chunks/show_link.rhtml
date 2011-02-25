@@ -1,0 +1,9 @@
+<p><em>The unique link to the file (<%= @chunk.filename %>) is: <br />
+<a href="http://<%= BASE_URL + "/download/download/" +  @chunk.link %>">http://<%= BASE_URL + "/download/download/" +  @chunk.link%></a></em>
+</p>
+
+<hr noshade />
+<p>If your customer has problems with the above link then maybe this will work better:<br />
+	<a href="http://<%= BASE_URL + "/links/" +  @chunk.link + "/" + @chunk.filename %>">http://<%= BASE_URL + "/links/" +  @chunk.link + "/" + @chunk.filename %></a>
+	<p>But be warned! The download counter and the maximum download limit will not work on this link.</p>
+</p>

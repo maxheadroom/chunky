@@ -1,0 +1,52 @@
+<div id="chunkentry">
+	<table>
+		<tr>
+			<td>Client Name</td>
+			<td><%= h(linklist.client) %></td>
+		</tr>
+		<tr>
+			<td>Client eMail</td>
+			<td><%= h(linklist.client_email) %></td>
+		</tr>
+		<tr>
+			<td>Author:</td>
+			<td><%= h(linklist.author)%></td>
+		</tr>
+		<tr>
+			<td>
+				original Filename:
+			</td>
+			<td>
+				<%= h(linklist.filename) %>
+			</td>
+		</tr>	
+		<tr>
+			<td>
+				Link: 
+			</td>
+			<td>
+				<a href="http://<%= BASE_URL + "/download/download/" +  linklist.link%>">http://<%= BASE_URL + "/download/download/" +  linklist.link%></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Description:</td>
+			<td><%= h(linklist.description)%></td>
+		</tr>
+		<tr>
+			<td>Max Download Count: <%= h(linklist.download_count_max)%></td>
+			<td>Download Count: <%= h(linklist.download_count)%></td>
+		</tr>
+		<tr>
+			<td>Expire Date:</td>
+			<td><%= h(linklist.expire_date)%></td>
+		</tr>
+		<tr>
+			<td colspan="2"><hr noshade /></td>
+		</tr>
+		<tr>
+			<td>Created at: <%= h(linklist.created_at.to_date)%></td>
+			<td>Last Update: <%= h(linklist.updated_at.to_date)%></td>
+		</tr>
+	</table>
+</div>

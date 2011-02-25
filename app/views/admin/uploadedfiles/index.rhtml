@@ -1,0 +1,14 @@
+<h2>Overview of available files in <%= RAILS_ROOT + UPLOAD_DIR %></h2>
+<p>please select a file to create a download link for</p>
+<%= form_tag({:controller => :chunks, :action => :input})%>
+<%= render(:partial => 'filename' , :collection => @filelist  ) %>
+<%= submit_tag("create download link")%>
+</form>
+<hr align="center" size="1" width="640" />
+<div >
+	Or upload a new file<br />
+<%= form_tag({:controller => 'uploadedfiles', :action => 'upload'}, :multipart => true) %>
+<p>File<br /><%= file_field(:uploadfile, :file)%></p>
+<p><%= submit_tag('Upload') %></p>
+</form>
+</div>

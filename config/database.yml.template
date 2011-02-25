@@ -1,0 +1,31 @@
+# SQLite version 3.x
+#   gem install sqlite3-ruby (not necessary on OS X Leopard)
+login: &login
+    username: chunky
+    password: chunky
+    adapter: mysql
+    host: localhost
+
+development:
+  database: chunky_development
+  <<: *login
+
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  database: chunky_test
+  username: chunky_test
+  password: test_uploads
+  adapter: mysql
+  host: 
+  port: 53306
+
+production:
+  database: chunky_production
+  username: chunky_prod
+  password: prod_uploads
+  adapter: mysql
+  host: #{db_host}
+  port: #{db_port}

@@ -1,0 +1,26 @@
+<div id="chunkentry">
+<table>
+	<tr>
+	</tr>
+	<tr>
+		<td>
+			original Filename:
+		</td>
+		<td>
+			<%= link_to(filename.filename,{:action => :reuse, :id => filename.id}) %>
+		</td>
+	</tr>
+	<tr>
+		<td>Client Name</td>
+		<td><%= h(filename.client) %></td>
+	</tr>
+	<tr>
+		<td>Client eMail</td>
+		<td><%= h(filename.client_email) %></td>
+	</tr>
+	<tr>
+		<td>Expire Date:</td>
+		<td><%= h(filename.expire_date)%></td>
+	</tr>
+</table>
+</div>

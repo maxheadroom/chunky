@@ -1,0 +1,8 @@
+<h2><%= flash[:header] %></h2>
+<%= 'Keine Links vorhanden' if @chunks.empty? %>
+<%= will_paginate(@chunks) %> <br/ >
+<%= render(:partial => 'linklist' , :collection => @chunks ) %>
+
+
+<hr noshade />
+<%= will_paginate(@chunks) %> 

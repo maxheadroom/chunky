@@ -1,0 +1,14 @@
+<%= error_messages_for :chunk, :header_message => "Es gab ein Problem mit Deiner Eingabe", :message => "Folgende Felder wurden falsch ausgefüllt:" %>
+<h2>Details for the download of: <em><%= @chunk.filename %></em></h2>
+<%= form_tag(:controller => "chunks", :action => 'create', :multipart => true) %>
+<input type="hidden" id="chunk_filename" name="chunk[filename]" value="<%= @chunk.filename %>">
+<p>Client*<br /><%= text_field(:chunk, :client)%></p>
+<p>Client notification eMail*<br /><%= text_field(:chunk, :client_email)%></p>
+<p>Client contact name (optional)<br /><%= text_field(:chunk, :client_contact_name)%></p>
+<p>Your eMail*<br /><%= text_field(:chunk, :author)%></p>
+<p>Description (optional)<br /><%= text_field(:chunk, :description)%></p>
+<p>Expiration date*<br /><%= date_select(:chunk, :expire_date, :order => [:day, :month, :year]) %></p>
+<p><em id="notice">notify client via eMail ?</em><br /><%= check_box_tag 'notify_client', true, false, :disabled => false %></p>
+<p>max. download count (optional)<br /><%= text_field(:chunk, :download_count_max)%></p>
+<p><%= submit_tag('Create') %></p>
+</form>

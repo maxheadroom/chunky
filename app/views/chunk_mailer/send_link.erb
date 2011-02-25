@@ -1,0 +1,15 @@
+Hello buddy,
+
+you just created a download link for <%= @chunk.client %>.
+
+The normal link is: http://<%= BASE_URL %>/download/download/<%= @chunk.link %>
+
+This link will expire on: <%= @chunk.expire_date %> <% if @chunk.download_count_max  %>or after <%= @chunk.download_count_max %> downloads.<% end %>
+
+
+==================================================
+If this doesn't work then maybe this will do better:
+
+http://<%= BASE_URL %>/links/<%= @chunk.link %>/<%= @chunk.filename %>
+
+
